@@ -1,0 +1,284 @@
+{
+	"module": {
+		"ForwardGate": {
+			"pay_done": {
+				"http_header": "",
+				"public_url": "/xyf123",
+				"service": "com.jyblife.complex.h5.act_console.PostEntranceShelves"
+			},
+			"port": "8183",
+			"xingkong_zmf": {
+				"http_header": "",
+				"public_url": "/notify_zmf",
+				"service": "com.jyblife.risk.service.zmf.ZmfNotifyService"
+			}
+		},
+		"access_itg": {
+			"config": "",
+			"ops_space": {
+				"port": "12000",
+				"worker_num": "4"
+			}
+		},
+		"accountSrv": {
+			"config_db_pool_size": "32",
+			"master_db_pool_size": "32",
+			"mq_durable": "0",
+			"mq_exchange": "user.direct",
+			"mq_exchange_type": "direct",
+			"ops_space": {
+				"log_tag": "logic_accountsrv",
+				"module_id": "",
+				"port": "19685"
+			},
+			"slave_db_pool_size": "32"
+		},
+		"act_task": {
+			"ops_space": {
+				"log_tag": "act_task",
+				"module_id": "act_task",
+				"port": "12078"
+			}
+		},
+		"aux_service": {
+			"MQExchange": "user.direct",
+			"MQExchangeType": "direct",
+			"RPCTimeOut": "1000",
+			"ops_space": {
+				"log_tag": "logic_aux_service",
+				"module_id": "",
+				"port": "9511"
+			},
+			"sdk_name_map": {
+				"123": "123456"
+			}
+		},
+		"bank_depository": {
+			"ops_space": ""
+		},
+		"cfgcenter": {
+			"ops_space": ""
+		},
+		"credit_loan": {
+			"config": {
+				"allow_duplicate_apply": "true",
+				"allow_duplicate_apply_repay": "false"
+			}
+		},
+		"credit_repay_manager": {
+			"config": {
+				"basic_order_prdid": "50034"
+			}
+		},
+		"dubbo_common": {
+			"jdbc_driver": "com.mysql.jdbc.Driver"
+		},
+		"eticket": {
+			"config": ""
+		},
+		"ext_credit_gateway": {
+			"config": {
+				"basic_order_prdid": "50034"
+			},
+			"ops_space": ""
+		},
+		"jmf_demo": {
+			"jdbc.driver": "com.mysql.jdbc.Driver",
+			"mysql.database": "test"
+		},
+		"micro_goods": {
+			"config": {
+				"redis_times": "10"
+			},
+			"ops_space": {
+				"log_tag": "micro_goods",
+				"module_id": "micro_goods",
+				"port": "12089"
+			}
+		},
+		"ordcenter": {
+			"config_db_pool_size": "16",
+			"master_db_pool_size": "16",
+			"mq_durable": "0",
+			"mq_exchange": "ord.direct",
+			"mq_exchange_type": "direct",
+			"ops_space": {
+				"log_tag": "logic_ordcenter",
+				"port": "19541"
+			},
+			"rpc_time_out": "1000",
+			"slave_db_pool_size": "16"
+		},
+		"paygateway": {
+			"cbchn": "23,25",
+			"ops_space": {
+				"log_tag": "bg_paygateway",
+				"port": "8092"
+			},
+			"payserviceurl": ""
+		},
+		"push_storage": {
+			"MQExchange": "push_storage.direct",
+			"MQExchangeType": "direct",
+			"db_host": "172.16.1.13",
+			"db_jyb_host": "172.16.1.13",
+			"db_jyb_name": "db_jyb_test",
+			"db_jyb_passwd": "root1234",
+			"db_jyb_user": "jiayoubao",
+			"db_name": "db_jyb_test",
+			"db_passwd": "root1234",
+			"db_pool_size": "1",
+			"db_user": "jiayoubao",
+			"ops_space": {
+				"log_tag": "app_pushstorage",
+				"port": "10729"
+			}
+		},
+		"register_assist": {
+			"abtest_provider": {
+				"interface": {
+					"com.jyblife.base.bi.abtest.abtestUrl": "",
+					"com.jyblife.base.bi.abtest.checkUserExpmt": "10020001",
+					"com.jyblife.base.bi.abtest.getExpmtInfo": "",
+					"com.jyblife.base.bi.abtest.xyf": ""
+				},
+				"ip": "172.16.1.16",
+				"port": "8091"
+			},
+			"master_addr": "172.16.1.8:8183",
+			"slave_addr": "172.16.1.8:8184"
+		},
+		"stages_order": {
+			"config": "",
+			"ops_space": {
+				"max_request": "1000",
+				"port": "12045",
+				"worker_num": "4"
+			}
+		},
+		"uacService": {
+			"comcache_token_t_cust_repay_plan": "167c4d916973414d17f3c7fd23999033",
+			"comcache_token_t_repay_order": "d7fe92c2895cfe053cf3a793c9970158",
+			"ops_space": {
+				"log_tag": "uacservice",
+				"modle_id": "",
+				"port": "9393"
+			}
+		},
+		"ucenter": {
+			"ops_space": {
+				"log_tag": "logic_ucenter",
+				"port": "19858"
+			}
+		},
+		"usrService": {
+			"ops_space": {
+				"log_tag": "logic_usrservice",
+				"port": "19985"
+			}
+		}
+	},
+	"qconf": {
+		"__qconf_register_hosts": {
+			"dev1": "123",
+			"localhost": "1.0.2",
+			"localhost.localdomain": "1.0.2"
+		}
+	},
+	"sys": {
+		"micro": {
+			"zk": "zookeeper://172.16.1.36:2181?backup=172.16.1.36:2181,172.16.1.36:2181"
+		},
+		"mq": {
+			"rabbitmq_cluster_master": {
+				"host": "172.16.1.8",
+				"passwd": "root",
+				"port": "5672",
+				"user": "jyb"
+			}
+		},
+		"mysql": {
+			"db_acccenter_master": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_config_sh_master": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_credit_slave": {
+				"host": "172.16.1.13",
+				"name": "db_credit",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_jyb_config_master": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_jyb_master": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_jyb_slave": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_marketing_master": {
+				"host": "172.16.1.13",
+				"name": "db_marketing",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_statement_master": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			},
+			"db_storagecenter_master": {
+				"host": "172.16.1.13",
+				"name": "db_jyb_test",
+				"passwd": "root1234",
+				"port": "3306",
+				"user": "jiayoubao"
+			}
+		},
+		"redis": {
+			"uredis_bg_data": {
+				"host": "172.16.1.16",
+				"port": "6379"
+			},
+			"uredis_bg_logic": {
+				"host": "172.16.1.16",
+				"port": "6379"
+			},
+			"uredis_bi": {
+				"host": "172.16.1.16",
+				"port": "6379"
+			}
+		}
+	},
+	"zookeeper": {
+		"quota": "aaaa",
+		"test": "bbbb"
+	}
+}
